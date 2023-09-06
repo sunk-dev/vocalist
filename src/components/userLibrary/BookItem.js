@@ -5,7 +5,7 @@ const BookItem = ({ item }) => {
   return <div className="book">{item}</div>;
 };
 
-BookItem.propTypes = {
+BookItem.propTypes = {//..?
   item: PropTypes.string.isRequired,
 };
 

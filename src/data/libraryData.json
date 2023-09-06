@@ -1,3 +1,1 @@
-{
-  "libraryList": []
-}
+{"libraryList":["test1","test2"],"test1":[{"name":"단어1","content":"뜻1"},{"name":"단어2","content":"뜻2"}],"test2":[{"name":"2222","content":"22222"}]}

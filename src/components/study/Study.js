@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { remadeContent, setMessage } from '../../modules/data';
@@ -38,12 +38,14 @@ const Study = () => {
   const snackbarHandler = () => {
     setOpenSnack(false);
     dispatch(setMessage(''));
+    // useCallback(() => dispatch(setMessage('')));
   };
 
   useEffect(() => {
     if (content === null) navigate('/library');
     if (!content) navigate('/library');
   }, []);
+  //빈배열:화면에 맨 처음 랜더링 될때만 실행해주고 업데이트 될때는 실행하지 않기 위해서
 
   useEffect(() => {
     if (message !== '') {
